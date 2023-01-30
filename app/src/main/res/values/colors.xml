@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="applist_dash_color">#6556d7</color>
+    <color name="applist_header_text_color">#383737</color>
+    <color name="applist_info_text_color">#757779</color>
+    <color name="nav_item_pressed_color">#efefef</color>
+    <color name="km_user_info_email_id_text_color">#595757</color>
+    <color name="km_user_info_email_id_empty_text_color">#4831d9</color>
+    <color name="km_user_online_text_color">#29c252</color>
+    <color name="km_user_offline_text_color">#787676</color>
+    <color name="km_user_away_text_color">#D6A64D</color>
+    <color name="km_delete_dialog_positive_button_color">#d00b0b</color>
+    <color name="km_resolve_icon_color">#5553B7</color>
+    <color name="km_spam_icon_color">#C93F50</color>
+    <color name="km_white_with_opacity">#91FFFFFF</color>
+    <color name="km_search_hint_color">#0e0e0f</color>
+    <color name="km_nav_item_text_color">#112222</color>
+    <color name="shimmer_item_color">#717171</color>
+    <color name="km_available_in_growth_plan_text_color">#499C78</color>
+    <color name="km_available_in_growth_plan_background_color">#E5F8F0</color>
+    <color name="km_tag_text_color">#3C4B50</color>
+    <color name="km_tag_background_color">#E7EAF2</color>
+    <color name="km_display_name_text_color">#5C6677</color>
+    <color name="km_other_agents_message_background_color">#FFF8E8</color>
+    <color name="km_transparent_color">#00000000</color>
+    <color name="km_expired_text_color">#67757E</color>
+    <color name="km_button_text_color">#005BA0</color>
+    <color name="km_blue_background_color">#E2F6FE</color>
+    <color name="km_blue_toast_color">#1676B6</color>
+    <color name="km_edit_phone_number_text_color">#f8121212</color>
+    <color name="km_add_number_button_color">#E2F6FE</color>
+    <color name="km_edit_email_id_text_color">#f8121212</color>
+    <color name="km_add_email_button_color">#E2F6FE</color>
+    <color name="km_phone_number_tv_color">#4831d9</color>
+    <color name="km_email_id_tv_color">#4831d9</color>
+
+</resources>

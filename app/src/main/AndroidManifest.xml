@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.kommunicate.agent">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".KmAgentApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_without_shape"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/ApplozicTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.UserReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ApplozicTheme"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".activities.KmUserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".conversations.activity.AllConversationActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:label="@string/title_activity_all_conversation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/ApplozicTheme" />
+        <activity
+            android:name=".conversations.activity.CustomConversationActivity"
+            android:configChanges="keyboardHidden|screenSize|locale|smallestScreenSize|screenLayout|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:parentActivityName=".conversations.activity.AllConversationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ApplozicTheme"
+            tools:node="replace">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.kommunicate.agent.conversations.activity.AllConversationActivity" />
+        </activity>
+        <activity
+            android:name=".activities.KmUserInfoActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="behind"
+            android:theme="@style/ApplozicTheme" />
+        <activity
+            android:name=".applist.AppListActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/ApplozicTheme" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/ApplozicTheme">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="dashboard.kommunicate.io"
+                    android:pathPattern="/conversations/.*"
+                    android:scheme="https" />
+                <data
+                    android:host="dashboard-test.kommunicate.io"
+                    android:pathPattern="/conversations/.*"
+                    android:scheme="https" />
+                <data
+                    android:host="dashboard-ca.kommunicate.io"
+                    android:pathPattern="/conversations/.*"
+                    android:scheme="https" />
+                <data
+                    android:host="beta.kommunicate.io"
+                    android:pathPattern="/conversations/.*"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".applist.KmForgotPasswordActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service
+            android:name=".pushnotification.FcmListenerService"
+            android:exported="true"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".KmLaunchChatService"
+            android:exported="false"
+            android:stopWithTask="false" />
+
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://3aa39c9b618a401f84f04cf14e13ff88@o204852.ingest.sentry.io/6098032" />
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCEc0DcE6-PmnKSQvw6pH38NUE0BwSyH-E" />
+        <meta-data
+            android:name="io.kommunicate.notification.smallIcon"
+            android:resource="@mipmap/ic_launcher_without_shape" />
+        <meta-data
+            android:name="main_folder_name"
+            android:value="KommunicateAgent"
+            tools:node="replace" />
+        <meta-data
+            android:name="com.applozic.module.key"
+            android:value="kommunicate-agent" />
+        <meta-data
+            android:name="activity.open.on.notification"
+            android:value="io.kommunicate.agent.conversations.activity.CustomConversationActivity"
+            tools:node="replace" />
+        <meta-data
+            android:name="share_feedback_url"
+            android:value="https://feedback.userreport.com/bf047d30-9b9a-4a31-96b5-e1672b4f516a/" />
+    </application>
+
+</manifest>

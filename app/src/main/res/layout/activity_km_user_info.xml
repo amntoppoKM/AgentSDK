@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/kmToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitleTextAppearance="@style/ToolbarSubtitle"
+            app:titleTextAppearance="@style/ToolbarTitle" />
+
+        <LinearLayout
+            android:id="@+id/kmUserInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kmToolbar"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/kmUserProfileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/kmUserDisplayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="9dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.01"
+                android:lineSpacingExtra="12sp"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingLeft="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="#f8101010"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/kmUserPresence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="14sp"
+                android:text="@string/km_online_text"
+                android:textColor="#29c252"
+                android:textIsSelectable="true"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:id="@+id/kmAddEmailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginRight="29dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/kmEmailIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/km_email_icon" />
+
+                <TextView
+                    android:id="@+id/kmEmailIdTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/kmEmailIcon"
+                    android:layout_toRightOf="@+id/kmEmailIcon"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="0.02"
+                    android:maxLines="1"
+                    android:text="@string/km_add_email_id_text"
+                    android:textColor="@color/km_email_id_tv_color"
+
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/slide_arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="43dp"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="10dp"
+                android:background="#e9e9e9" />
+
+            <RelativeLayout
+                android:id="@+id/kmAddPhoneNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginRight="29dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/kmPhoneNumberIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/km_contact_number_icon" />
+
+                <TextView
+                    android:id="@+id/kmPhoneNumberTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/kmPhoneNumberIcon"
+                    android:layout_toRightOf="@+id/kmPhoneNumberIcon"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="0.03"
+                    android:maxLines="1"
+                    android:text="@string/km_add_phone_number_text"
+                    android:textColor="@color/km_phone_number_tv_color"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/slide_arrow_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="10dp"
+                android:background="#f0f0f0" />
+
+            <LinearLayout
+                android:id="@+id/initialPageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/initialPageText"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.04"
+                    android:text="Initial Page"
+                    android:textColor="#787676"
+                    android:textDirection="locale"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/initialPageValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="none"
+                    android:fontFamily="sans-serif"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="www.google.com"
+                    android:textColor="#5553B7"
+                    android:textDirection="locale"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/initialDivider"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="10dp"
+                android:background="#f0f0f0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="19dp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.06"
+                android:text="@string/km_user_info"
+                android:textColor="#9b9999"
+                android:textIsSelectable="true"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/kmUserInfoRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="21dp" />
+
+            <TextView
+                android:id="@+id/kmExpandViewButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:drawableEnd="@drawable/km_expand_view_icon"
+                android:drawableRight="@drawable/km_expand_view_icon"
+                android:drawablePadding="7dp"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.01"
+                android:text="@string/km_see_more_text"
+                android:textColor="#5553b7"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="15dp"
+                android:background="#f0f0f0" />
+
+            <TextView
+                android:id="@+id/kmDeleteConversation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.03"
+                android:paddingStart="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="19dp"
+                android:paddingBottom="19dp"
+                android:text="@string/km_delete_conversation_text"
+                android:textColor="#d00b0b"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kmFillDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/kmToolbar"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/kmFillDetailsIcon"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp" />
+
+            <TextView
+                android:id="@+id/kmFillDetailsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="67.5dp"
+                android:layout_marginLeft="67.5dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="67.5dp"
+                android:layout_marginRight="67.5dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="4sp"
+                android:textColor="#f8121212"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/kmDetailsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="67.5dp"
+                android:layout_marginLeft="67.5dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="67.5dp"
+                android:layout_marginRight="67.5dp"
+                android:fontFamily="sans-serif-light"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="4sp"
+                android:maxLines="1"
+                android:textColor="#f8121212"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

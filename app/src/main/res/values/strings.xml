@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">Kommunicate Support Desk</string>
+    <string name="login_page_message">Intelligent customer communication platform</string>
+    <string name="signup_info">"Don’t have an account? <a href='https://www.kommunicate.io/'>Sign up</a></string>
+    <string name="km_forgot_password_text">Enter your registered email below to \nreceive password reset instructions</string>
+    <string name="km_reset_password_confirmation">Password reset link has been sent \nto your email</string>
+    <string name="km_applist_header_text">Select your Application ID</string>
+    <string name="km_applist_info_text">You are registered in multiple applications</string>
+    <string name="click_more">Click more</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="show">Show</string>
+    <string name="login">Login</string>
+    <string name="login_with_sso">Login with SSO</string>
+    <string name="or">or</string>
+    <string name="show_password">Show</string>
+    <string name="hide_password">Hide</string>
+    <string name="login_with_google">LOGIN WITH GOOGLE</string>
+    <string name="conversation_not_found">Conversation not found</string>
+    <string name="km_user_info">USER INFO</string>
+    <string name="km_online_text">Online now</string>
+    <string name="km_add_phone_number_text">Add phone number</string>
+    <string name="km_add_email_id_text">Add email Id</string>
+    <string name="km_enter_search_text_error">Please enter a search text to search</string>
+    <string name="km_see_more_text">See more</string>
+    <string name="km_see_less_text">See less</string>
+    <string name="km_delete_conversation_text">Delete conversation</string>
+    <string name="km_save_option">SAVE</string>
+    <string name="km_user_info_title">User Info</string>
+    <string name="km_fill_detail_phone_text">Add a phone number for your user</string>
+    <string name="km_fill_detail_email_text">Add an email id for your user</string>
+    <string name="km_fill_detail_phone_hint_text">Phone number</string>
+    <string name="km_fill_detail_email_hint_text">Email id</string>
+    <string name="km_invalid_email_error">Invalid email id!</string>
+    <string name="km_invalid_phone_error">Invalid phone number!</string>
+    <string name="km_delete_dialog_title">Are you sure you want to delete this conversation?</string>
+    <string name="km_delete_dialog_message">This action is irreversible and all the messages and user info will be lost.</string>
+    <string name="km_delete_dialog_positive_text">DELETE CONVERSATION</string>
+    <string name="km_please_wait_string">Please wait&#8230;</string>
+    <string name="km_search_instructions">Press search button to start searching&#8230;</string>
+    <string name="km_empty_message_search_text">No data found for the search text</string>
+    <string name="km_password_field_blank_error">Password field cannot be blank&#8230;</string>
+    <string name="km_email_or_pwd_field_blank_error">Email or Password field cannot be blank&#8230;</string>
+    <string name="km_email_field_blank_error">Email field cannot be blank&#8230;</string>
+    <string name="km_sso_description_text">Login with Single Sign-On (SSO)</string>
+    <string name="km_go_back_to_login">&lt; Go back to Login</string>
+    <string name="km_email">Email</string>
+    <string name="all_conversations"> All Conversations</string>
+
+    <string name="title_activity_all_conversation">AllConversationActivity</string>
+
+    <string name="km_all_conversations">All</string>
+    <string name="km_assigned_conversations">Assigned</string>
+    <string name="km_closed_conversations">Resolved</string>
+    <string name="km_edit_profile">Edit Profile</string>
+    <string name="km_switch_application">Switch Application</string>
+    <string name="km_switch_application_error">Unable to change Application. Please logout and try again.</string>
+    <string name="km_logout">Logout</string>
+    <string name="km_share_feedback">Share Feedback</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="no_conversation_found">Conversations not found!</string>
+    <string name="turn_away">Turn On Away Mode</string>
+    <string name="turn_online">Turn On Online Mode</string>
+    <string name="status_set_failed">Failure in agent setting status.</string>
+    <string name="status_set">Status set.</string>
+    <string name="status_get_failed">Failure in retrieving agent status.</string>
+    <string name="setting_status">Setting status.</string>
+    <string name="km_assignee_update_text">Please wait, updating assignee&#8230;</string>
+    <string name="km_team_update_text">Please wait, assigning to team&#8230;</string>
+    <string name="km_status_update_text">Please wait, updating status&#8230;</string>
+    <string name="km_internal_error_text">Some internal error occurred</string>
+    <string name="km_set_away_text">Set yourself as <![CDATA[<b>%s</b>]]></string>
+    <string name="km_edit_profile_text">Edit Profile</string>
+    <string name="km_profile_text">Profile</string>
+    <string name="km_away_text">away</string>
+    <string name="km_online">online</string>
+    <string name="km_team_list_title">Teams</string>
+    <string name="km_no_teams_found">No matching teams found</string>
+    <string name="km_empty_team_list_message">No teams found</string>
+    <string name="km_change_profile_photo">Change Profile Photo</string>
+    <string name="km_display_name_label">Name</string>
+    <string name="km_email_label">Email</string>
+    <string name="km_designation_label">Designation</string>
+    <string name="km_contact_number_label">Contact Number</string>
+
+    <string name="km_display_name_hint">Enter your name</string>
+    <string name="km_email_hint">Enter your email</string>
+    <string name="km_designation_hint">Role within the Organization</string>
+    <string name="km_contact_number_hint">Enter Contact Number</string>
+
+    <string name="km_remove">Remove\nphoto</string>
+    <string name="km_gallery">Gallery</string>
+    <string name="km_camera">Camera</string>
+    <string name="km_profile_photo">Profile Photo</string>
+
+    <string name="km_remove_profile_photo">Remove Profile Photo?</string>
+    <string name="km_update_profile_text">Update profile</string>
+    <string name="km_no_conversations_text">You have no pending conversations</string>
+    <string name="km_all_conversations_resolved_header">Kudos!</string>
+    <string name="km_all_conversations_resolved_description">You’ve resolved all conversations</string>
+    <string name="km_invalid_credentials_error">Invalid Email Id or Password</string>
+    <string name="km_add_tags">Add Tags</string>
+    <string name="km_manage_tags">Manage Tags</string>
+    <string name="km_done">Done</string>
+    <string name="km_tags">Tags</string>
+    <string name="km_add">Add</string>
+    <string name="km_manage">Manage</string>
+    <string name="km_tag_updated_successfully">Tag updated successfully</string>
+    <string name="km_tags_info">Press and hold a tag\nto rename or delete it</string>
+    <string name="km_tag_already_exists">%1$s already exists</string>
+    <string name="km_available_in_growth_plan">Available in Growth Plan</string>
+    <string name="km_select_a_tag_or_create">Select a tag or create new</string>
+    <string name="km_tag_created">Tag created</string>
+    <string name="km_tag_exceeded_error">You cannot add more than 5 tags in a conversation</string>
+    <string name="km_tag_applied">Tag applied</string>
+    <string name="km_tag_removed">Tag removed</string>
+    <string name="km_tag_not_authorized">You need admin permissions to create tags</string>
+
+    <string name="km_storage_permission_rejected">Storage permission denied</string>
+    <string name="km_camera_permission_rejected">Camera permission denied</string>
+    <string name="km_update_failed_message">Failed to update your details</string>
+
+    <string name="billing_expired_thanks">Thanks for trying Kommunicate</string>
+    <string name="billing_expired_pagename">Trial Ended</string>
+    <string name="billing_expired_text">Hi there, your free trial has ended.\nWe hope you were able to serve and delight your customers using Kommunicate.</string>
+    <string name="billing_expired_continue">To continue head on over to the billing \nsection in the dashboard and choose a plan</string>
+    <string name="billing_expired_footer">Trusted by 10,000+ companies across the globe</string>
+    <string name="km_send_transcript">Send transcript to the user</string>
+    <string name="km_transcript_to">Transcript will be sent to %1$s</string>
+    <string name="km_transcript_enter_email">Please enter the user’s email</string>
+    <string name="km_add_email_address">Add Email Address</string>
+    <string name="km_transcript_success">Transcript sent</string>
+    <string name="km_transcript_failed">Failed to send Transcript. Please try again.</string>
+
+    <string name="km_change_phone_number">Add user\'s Phone Number</string>
+    <string name="km_enter_phone_number">Please enter the user\'s Phone Number</string>
+    <string name="km_cancel_phone_number">CANCEL</string>
+    <string name="km_button_phone_number_change">ADD</string>
+
+    <string name="km_change_email_id">Add user\'s Email Id</string>
+    <string name="km_enter_email_id">Please enter the user\'s Email Id</string>
+
+    <string name="km_cancel_email_id">CANCEL</string>
+    <string name="km_button_email_id_change">ADD</string>
+
+    <string name="km_enter_email_id_hint">Enter Email Id</string>
+
+    <string name="km_enter_phone_number_hint">Enter Phone Number</string>
+    <string name="km_unauthorized">Your credentials have changed, please login again.</string>
+
+    <string-array name="applistColors">
+        <item>#006e4a</item>
+        <item>#CF04FE</item>
+        <item>#284771</item>
+        <item>#C78818</item>
+        <item>#80BCA2</item>
+        <item>#759996</item>
+        <item>#3C4DD9</item>
+        <item>#9F0F4F</item>
+        <item>#8BD5B3</item>
+        <item>#355625</item>
+        <item>#c15148</item>
+        <item>#c34973</item>
+        <item>#a053ad</item>
+        <item>#8759d6</item>
+        <item>#7986CB</item>
+        <item>#3e83f5</item>
+        <item>#4FC3F7</item>
+        <item>#42b3c1</item>
+        <item>#4DB6AC</item>
+        <item>#57BB8A</item>
+        <item>#9CCC65</item>
+        <item>#b2bd43</item>
+        <item>#b99700</item>
+        <item>#c79a1c</item>
+        <item>#FFA726</item>
+        <item>#FF8A65</item>
+        <item>#5a1616</item>
+        <item>#074361</item>
+        <item>#b97961</item>
+        <item>#715858</item>
+        <item>#8288a9</item>
+        <item>#5c5aa7</item>
+        <item>#949494</item>
+        <item>#4ecada</item>
+        <item>#9c614d</item>
+        <item>#84ca33</item>
+        <item>#5e8631</item>
+    </string-array>
+
+    <string-array name="select_al_url">
+        <item>https://chat.kommunicate.io</item>
+        <item>https://chat-ca.kommunicate.io</item>
+        <item>https://chat-test.kommunicate.io</item>
+    </string-array>
+    <string-array name="select_km_url">
+        <item>https://api.kommunicate.io</item>
+        <item>https://api-in.kommunicate.io</item>
+        <item>https://api-test.kommunicate.io</item>
+    </string-array>
+
+    <string-array name="select_km_url_name">
+        <item>Kommunicate</item>
+        <item>Kommunicate Mumbai (India)</item>
+        <item>Kommunicate Internal</item>
+    </string-array>
+
+    <string name="server_client_id">660706316085-tt8berusqqdekmo22rdea2mc17bq17kp.apps.googleusercontent.com</string>
+</resources>

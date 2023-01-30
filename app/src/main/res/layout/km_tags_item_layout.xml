@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="kmTag"
+            type="io.kommunicate.agent.model.KmTag" />
+
+        <variable
+            name="kmCallback"
+            type="io.kommunicate.agent.listeners.KmTagsCallback" />
+
+        <variable
+            name="isLongClicked"
+            type="Boolean" />
+
+        <variable
+            name="isRenameClicked"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="44dp"
+        android:background="@{isLongClicked ? @color/km_blue_background_color : @color/white}"
+        android:onLongClick="@{(v) -> kmCallback.onLongClick(kmTag)}"
+        android:onClick="@{(v) -> isRenameClicked ? kmCallback.onDeleteTag(kmTag) : kmCallback.onSingleClick(kmTag)}">
+
+        <TextView
+            android:id="@+id/km_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{isRenameClicked ? View.GONE : View.VISIBLE}"
+            app:tagName="@{kmTag}" />
+
+        <EditText
+            android:id="@+id/km_name_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:gravity="start"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            android:lineSpacingExtra="4sp"
+            android:cursorVisible="true"
+            android:textAlignment="viewStart"
+            android:background="@color/km_blue_background_color"
+            android:layoutDirection="ltr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintWidth_percent="0.6"
+            app:layout_constraintEnd_toStartOf="@+id/km_delete_image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{isRenameClicked ? View.VISIBLE : View.GONE}"
+            android:text="@{kmTag.name}" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="km_name_text_view" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:constraint_referenced_ids="km_new_tag"
+            app:layout_constraintGuide_percent="0.96"
+            app:layout_constraintStart_toEndOf="@+id/km_new_tag" />
+
+        <TextView
+            android:id="@+id/km_new_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/km_tag_background"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp"
+            android:text="@{kmTag.name}"
+            android:textColor="@color/km_tag_text_color"
+            android:textSize="15sp"
+            android:visibility="@{kmTag.newTag ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/km_tick_image_view"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/km_single_tick"
+            android:visibility="@{kmTag.applied ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#64D9A8" />
+
+        <ImageView
+            android:id="@+id/km_delete_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            app:srcCompat="@drawable/km_delete_icon"
+            android:visibility="@{isLongClicked &amp; !isRenameClicked? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/km_rename_image"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{(v) -> kmCallback.onDeleteTag(kmTag)}"
+            />
+
+        <ImageView
+            android:id="@+id/km_rename_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/km_rename_icon"
+            android:visibility="@{isLongClicked &amp; !isRenameClicked? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{(v) -> kmCallback.onRenameTag(kmTag)}"
+            />
+
+        <ImageView
+            android:id="@+id/km_cancel_circle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            app:srcCompat="@drawable/km_cancel_circle"
+            android:visibility="@{isRenameClicked ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/km_success_rename"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{(v) -> kmCallback.onCancel()}"
+            />
+
+        <ImageView
+            android:id="@+id/km_success_rename"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="16dp"
+            app:srcCompat="@drawable/km_success_circle"
+            android:visibility="@{isRenameClicked ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="@{(v) -> kmCallback.onRenameSuccess(kmTag, kmNameEditText.getText().toString())}"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/km_resolve_status_item_divider_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

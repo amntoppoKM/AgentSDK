@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="clickHandler"
+            type="io.kommunicate.agent.conversations.KmClickHandler" />
+
+        <variable
+            name="moreItem"
+            type="io.kommunicate.agent.model.KmMoreItem" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:onClick="@{(v) -> clickHandler.onItemClicked(v, moreItem)}"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <TextView
+                android:id="@+id/conversationStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:drawableStart="@{moreItem.icon}"
+                android:drawableLeft="@{moreItem.icon}"
+                android:drawablePadding="18.5dp"
+                android:text="@{moreItem.titleText}"
+                android:textColor="@{moreItem.colorResId}"
+                android:textSize="17sp"
+                app:isBold="@{moreItem.titleTextStyleBold}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15.3dp"
+                android:layout_marginRight="15.3dp"
+                android:drawableEnd="@drawable/slide_arrow_right"
+                android:drawableRight="@drawable/slide_arrow_right"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxWidth="150dp"
+                android:maxLines="1"
+                android:text="@{moreItem.extensionText}"
+                android:textSize="17sp"
+                android:visibility="@{!TextUtils.isEmpty(moreItem.extensionText) ? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15.3dp"
+                android:layout_marginRight="15.3dp"
+                android:background="@color/km_available_in_growth_plan_background_color"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="6dp"
+                android:text="@string/km_available_in_growth_plan"
+                android:textColor="@color/km_available_in_growth_plan_text_color"
+                android:textSize="17sp"
+                android:visibility="@{moreItem.tagsViewAvailable ? View.GONE : View.VISIBLE}" />
+
+        </FrameLayout>
+
+        <com.applozic.mobicomkit.uiwidgets.conversation.richmessaging.views.KmFlowLayout
+            android:id="@+id/km_flow_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="56dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="15.3dp"
+            android:layout_marginRight="15.3dp"
+            android:visibility="@{moreItem.itemList != null ? View.VISIBLE : View.GONE}"
+            app:setData="@{moreItem.itemList}" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="56dp"
+            android:layout_marginLeft="56dp"
+            android:background="@color/km_resolve_status_item_divider_color" />
+    </FrameLayout>
+</layout>

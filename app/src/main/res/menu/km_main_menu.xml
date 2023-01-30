@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search_option"
+        android:icon="@drawable/km_ic_action_search"
+        android:orderInCategory="1"
+        android:title="@string/search_title"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/km_ic_action_time"
+        android:orderInCategory="2"
+        android:title="@string/logout"
+        android:visible="false"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/status"
+        android:icon="@drawable/km_ic_action_time"
+        android:title="@string/turn_away"
+        android:visible="false"
+        app:showAsAction="collapseActionView" />
+</menu>

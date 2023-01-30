@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "660706316085",
+    "firebase_url": "https://kommunicate-c6413.firebaseio.com",
+    "project_id": "kommunicate-c6413",
+    "storage_bucket": "kommunicate-c6413.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660706316085:android:9226bd7049621252",
+        "android_client_info": {
+          "package_name": "io.kommunicate.agent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660706316085-3d1ut6gr2fquo72f4fkd9pagb8cl3qim.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.kommunicate.agent",
+            "certificate_hash": "f940a4dff86e74d90a8fb61af970adef75563efd"
+          }
+        },
+        {
+          "client_id": "660706316085-cg4pm4tlr4hm3fke59jred4uv3laeq6h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.kommunicate.agent",
+            "certificate_hash": "d59a9e0d098745abea6c46998a08f7f8dd74ce79"
+          }
+        },
+        {
+          "client_id": "660706316085-nto5ckmh4s341oqrd0tb2bo7slvrc3mi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.kommunicate.agent",
+            "certificate_hash": "9432d4b1fbe61bf4bf77b03e50bc322f4a1415e4"
+          }
+        },
+        {
+          "client_id": "660706316085-ojr9a5bghsfvn6f6v2ljb1vpt0dstkn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.kommunicate.agent",
+            "certificate_hash": "d158165a75ccc56dc5cf8c2301b1625a2fb5966f"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8ZMCAx3QL7IQRW9lMwDdRJqtHg7brrXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660706316085-433boo9ggh0up9evn44unkfuamosf8lj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "660706316085-mlnuindeq0f9c480r828ft2p4qetrhe8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.kommunicate.agent"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660706316085:android:712a16cff9aa441e",
+        "android_client_info": {
+          "package_name": "io.kommunicate.chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8ZMCAx3QL7IQRW9lMwDdRJqtHg7brrXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660706316085-433boo9ggh0up9evn44unkfuamosf8lj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "660706316085-mlnuindeq0f9c480r828ft2p4qetrhe8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.kommunicate.agent"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

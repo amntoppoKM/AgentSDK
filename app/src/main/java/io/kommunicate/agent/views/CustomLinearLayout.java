@@ -1,0 +1,43 @@
+package io.kommunicate.agent.views;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.widget.LinearLayout;
+
+public class CustomLinearLayout extends LinearLayout {
+    public CustomLinearLayout(Context context) {
+        super(context);
+        requestDisallowInterceptTouchEvent(true);
+    }
+
+    public CustomLinearLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        requestDisallowInterceptTouchEvent(true);
+    }
+
+    public CustomLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        requestDisallowInterceptTouchEvent(true);
+    }
+
+
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        getParent().requestDisallowInterceptTouchEvent(true);
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_MOVE:
+                requestDisallowInterceptTouchEvent(true);
+                break;
+            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_CANCEL:
+                requestDisallowInterceptTouchEvent(false);
+                break;
+        }
+        return super.onTouchEvent(event);
+    }
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/km_change_phone_number"
+            android:textColor="@color/km_resolve_status_list_heading"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/km_close_phone"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end"
+            android:background="@color/applozic_transparent_color"
+            android:src="@drawable/km_ic_action_cancel" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/km_enter_phone_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="22dp"
+        android:textSize="14sp"
+        android:text="@string/km_enter_phone_number"/>
+
+    <EditText
+        android:id="@+id/km_edit_phone_number_text"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:fontFamily="sans-serif-light"
+        android:letterSpacing="0.02"
+        android:lineSpacingExtra="4sp"
+        android:maxLines="1"
+        android:textColor="@color/km_edit_phone_number_text_color"
+        android:textSize="16sp"
+        android:hint="@string/km_enter_phone_number_hint"
+        android:visibility="visible"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="end">
+
+        <Button
+            android:id="@+id/km_cancel_phone_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/km_button_text_color"
+            android:background="@color/white"
+            android:shadowRadius="0"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="@string/km_cancel_phone_number"/>
+        <Button
+            android:id="@+id/km_add_number_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/km_add_number_button_color"
+            android:textColor="@color/km_button_text_color"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/km_button_phone_number_change"/>
+    </LinearLayout>
+
+</LinearLayout>
